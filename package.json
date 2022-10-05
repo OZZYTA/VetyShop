@@ -1,0 +1,24 @@
+{
+  "name": "vetyshop",
+  "version": "1.0.0",
+  "description": "Tienda virtual de productos para mascotas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OZZYTA/VetyShop.git"
+  },
+  "author": "Natali Velasquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OZZYTA/VetyShop/issues"
+  },
+  "homepage": "https://github.com/OZZYTA/VetyShop#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.4"
+  }
+}
