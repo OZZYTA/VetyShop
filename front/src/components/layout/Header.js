@@ -1,6 +1,8 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react'
+import "../../App.css"
 
 const Header = () => {
+
     return (
         <Fragment>
             <nav className='navbar row'>
@@ -35,6 +37,7 @@ const Header = () => {
 
         </Fragment>
     )
-}
+
+    }
 
 export default Header
