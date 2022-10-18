@@ -1,39 +1,41 @@
-import React, { Fragment } from 'react'
+import React, {Fragment} from 'react'
+import "../../App.css"
 
 const Header = () => {
   return (
     <Fragment>
-        <nav className='navbar row'>
-            <div className='col-12 col-md-3'>
-                <div className='navbar-brand'>
-                    <img src="./images/vetyshop.png" alt="Vety Shop Store Logo"></img>
+    
+            <nav className="navbar row">
+                <div className="col-12 col-md-3">
+                    <div className="navbar-brand">
+                            <img src="./images/vetyshop.png" alt="Logo de la empresa"/>
+                    </div>
                 </div>
-            </div>
 
-            <div className='col-12 col-md-6 mt-2 mt-md-0'>
-                <div className="input-group">
-                    <input 
+                <div className="col-12 col-md-6 mt-2 mt-md-0">
+                    <div class= "input-group">
+                        <input
                         type="text"
                         id="search_field"
                         class="form-control"
-                        placeholder='Que producto busca?'></input>
+                        placeholder="Que producto busca?"></input>
                         <div class="input-group-append">
                             <button id="search-btn" class="btn">
-                                <i class="fa fa-search" aria-hidden="true">Buscar</i>
-                                
-                                </button>    
+                                <i class="fa fa fa" aria-hidden="true"></i>
+                            </button>
                         </div>
+                    </div>
                 </div>
-            </div>
-            <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
-                <button className="btn" id="login-btn">Inicie Sesión</button>
-                <span id="cart" className="ml-3">Carrito</span>
-                <span className="ml-1" id="cart_count">2</span>
-            </div>
 
-        </nav>
+                <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
+                   <button className='btn' id="login_btn">Inicie Sesión</button>
 
-    </Fragment>
+                   <span id="cart" className="ml-3">Carrito</span>
+                   <span className='ml-1' id="cart_count">2</span>
+
+                </div>
+            </nav>
+        </Fragment>
   )
 }
 
