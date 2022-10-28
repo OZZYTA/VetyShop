@@ -7,6 +7,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.2",
+    "mdbreact": "^5.2.0",
     "react": "^18.2.0",
     "react-alert": "^7.0.3",
     "react-alert-template-basic": "^1.0.2",
@@ -45,5 +46,5 @@
       "last 1 safari version"
     ]
   },
-  "proxy":"http://localhost:4000"
+  "proxy": "http://localhost:4000"
 }
