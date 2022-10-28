@@ -1,0 +1,36 @@
+{
+    "item": [
+        {
+            "_id": "63513206109735e58d94addd",
+            "producto": "Agility Dog Creamy Food",
+            "precio": 69000,
+            "imagen": "./images/productos/agility_blando_perros.png",
+            "inventario": 40,
+            "__v": 0
+        },
+        {
+            "_id": "63513298109735e58d94ade0",
+            "nombre": "Chunky Cachorros alimento humedo",
+            "precio": 23000,
+            "imagen": "./images/productos/chunky_blando_perros.jpeg",
+            "inventario": 120,
+            "__v": 0
+        },
+        {
+            "_id": "635132ea109735e58d94ade3",
+            "nombre": "Chunky gatitos alimento humedo",
+            "precio": 18000,
+            "imagen":  "./images/productos/felix_blando_gatos.jpeg",
+            "inventario": 20,
+            "__v": 0
+        },
+        {
+            "_id": "63513379109735e58d94ade6",
+            "nombre": "Purina Pedegree Perros alimento humedo",
+            "precio": 20000,
+            "imagen":"./images/productos/pedegree_blando_perros.jpeg",
+            "inventario": 200,
+            "__v": 0
+        }
+    ]
+}
