@@ -1,10 +1,33 @@
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const producto = require("../models/productos");
+const APIFeatures = require("../utils/apiFeatures");
 const ErrorHandler = require("../utils/errorHandler");
 const fetch = (url) => import('node-fetch').then(({ default: fetch }) => fetch(url)); //Usurpación del require
 
 //Ver la lista de productos
 exports.getProducts = catchAsyncErrors(async (req, res, next) => {
+
+    const resPerPage = 3;
+    const productsCount = await producto.countDocuments();
+
+    const apiFeatures = new APIFeatures(producto.find(), req.query)
+        .search()
+        .filter();
+
+    let products = await apiFeatures.query;
+    let filteredProductsCount= products.length;
+    apiFeatures.pagination(resPerPage);
+    products = await apiFeatures.query.clone();
+
+    res.status(200).json({
+        success: true,
+        productsCount,
+        resPerPage,
+        filteredProductsCount,
+        products
+    })
+
+
     const productos = await producto.find();
     if (!productos) {
         return next(new ErrorHandler("Informacion no encontrada", 404))
@@ -132,47 +155,47 @@ exports.getProductReviews = catchAsyncErrors(async (req, res, next) => {
 exports.deleteReview = catchAsyncErrors(async (req, res, next) => {
     const product = await producto.findById(req.query.idProducto);
 
-    const opiniones = product.opiniones.filter(opinion => 
+    const opiniones = product.opiniones.filter(opinion =>
         opinion._id.toString() !== req.query.idReview.toString());
 
-        const numCalificaciones = opiniones.length;
+    const numCalificaciones = opiniones.length;
 
-        const calificacion = product.opiniones.reduce((acc, Opinion) =>
-            Opinion.rating + acc, 0) / opiniones.length;
+    const calificacion = product.opiniones.reduce((acc, Opinion) =>
+        Opinion.rating + acc, 0) / opiniones.length;
 
-        await producto.findByIdAndUpdate(req.query.idProducto, {
-            opiniones,
-            calificacion,
-            numCalificaciones
-        }, {
-            new: true,
-            runValidators: true,
-            useFindAndModify: false
-        })
-        res.status(200).json({
-            success: true,
-            message: "review eliminada correctamente"
-        })
-
+    await producto.findByIdAndUpdate(req.query.idProducto, {
+        opiniones,
+        calificacion,
+        numCalificaciones
+    }, {
+        new: true,
+        runValidators: true,
+        useFindAndModify: false
+    })
+    res.status(200).json({
+        success: true,
+        message: "review eliminada correctamente"
     })
 
-    //HABLEMOS DE FETCH
-    //Ver todos los productos
-    function verProductos() {
-        fetch('http://localhost:4000/api/productos')
-            .then(res => res.json())
-            .then(res => console.log(res))
-            .catch(err => console.error(err))
-    }
+})
 
-    //verProductos(); LLamamos al metodo creado para probar la consulta
+//HABLEMOS DE FETCH
+//Ver todos los productos
+function verProductos() {
+    fetch('http://localhost:4000/api/productos')
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(err => console.error(err))
+}
 
-    //Ver por id
-    function verProductoPorID(id) {
-        fetch('http://localhost:4000/api/producto/' + id)
-            .then(res => res.json())
-            .then(res => console.log(res))
-            .catch(err => console.error(err))
-    }
+//verProductos(); LLamamos al metodo creado para probar la consulta
+
+//Ver por id
+function verProductoPorID(id) {
+    fetch('http://localhost:4000/api/producto/' + id)
+        .then(res => res.json())
+        .then(res => console.log(res))
+        .catch(err => console.error(err))
+}
 
 //verProductoPorID('63456a8d9163cb9dbbcaa235'); Probamos el metodo con un id
