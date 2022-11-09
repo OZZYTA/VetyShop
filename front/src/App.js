@@ -10,6 +10,7 @@ import Dashboard from './components/admin/Dashboard';
 import ProductsList from './components/admin/ProductsList';
 import NewProduct from './components/admin/newProduct';
 import Cart from './components/cart/Cart';
+import { Login } from './components/user/Login';
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="/nuevoProducto" element={<NewProduct />}/>
             <Route path="/search/:keyword" element={<Home />}/>
             <Route path="/carrito" element={<Cart />}/>
+            <Route path="/login" element={<Login />} />
           </Routes>
         </div>
         <Footer />

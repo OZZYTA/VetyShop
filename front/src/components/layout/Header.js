@@ -14,10 +14,12 @@ const Header = () => {
                     </div>
                 </div>
 
-                <div className='col-12 col-md-6 mt-2 mt-md-0'>
+                <div className='col-12 col-md-4 mt-2 mt-md-0'>
                  {/*Aqui va buscar*/}
                  <Search />
                 </div>
+                {/*Boton inicio sesión*/}
+                <Link to="/login" className='btn ml-4' id="login_btn">Login</Link>
                 <div className="col-12 col-md-3 mt-4 mt-md-0 text-center">
                     <div className="ml-4 dropdown d-inline">
                         <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button"
