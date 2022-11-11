@@ -11,6 +11,7 @@ import ProductsList from './components/admin/ProductsList';
 import NewProduct from './components/admin/newProduct';
 import Cart from './components/cart/Cart';
 import { Login } from './components/user/Login';
+import { Register } from './components/user/Register';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
             <Route path="/search/:keyword" element={<Home />}/>
             <Route path="/carrito" element={<Cart />}/>
             <Route path="/login" element={<Login />} />
+            <Route path="/register" element= {<Register />} />
           </Routes>
         </div>
         <Footer />
