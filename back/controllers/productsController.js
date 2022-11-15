@@ -168,6 +168,17 @@ exports.deleteReview = catchAsyncErrors(async (req, res, next) => {
 
 })
 
+//Ver la lista de productos (Admin)
+exports.getAdminProducts = catchAsyncErrors(async (req, res, next) => {
+
+    const products = await producto.find()
+
+    res.status(200).json({
+        products
+    })
+
+})
+
 //HABLEMOS DE FETCH
 //Ver todos los productos
 function verProductos() {

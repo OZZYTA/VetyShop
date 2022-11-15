@@ -8,6 +8,7 @@ import { logout} from "../../actions/userActions"
 
 const Header = () => {
     const {cartItems} = useSelector(state=>state.cart)
+    
     const alert= useAlert();
     const dispatch= useDispatch();
 
