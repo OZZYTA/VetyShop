@@ -20,7 +20,7 @@ export const OrderDetails = () => {
             dispatch(clearErrors)
         }
     },[dispatch, alert, error, params.id])
-    const detalleEnvio= envioInfo && `${envioInfo.direccion}, ${envioInfo.ciudad}, ${envioInfo.departament}`
+    const detalleEnvio= envioInfo && `${envioInfo.direccion}, ${envioInfo.ciudad}, ${envioInfo.departamento}`
 
     const esPago= pagoInfo && pagoInfo.estado==="Aceptado" ? true : false
 
@@ -36,7 +36,7 @@ export const OrderDetails = () => {
                             <h1 className="my-5">Pedido # {order._id}</h1>
 
                             <h4 className="mb-4">Datos de envio</h4>
-                            <p><b>Nombre:</b> {user && user.name}</p>
+                            <p><b>Nombre:</b> {user && user.nombre}</p>
                             <p><b>Telefono:</b> {envioInfo && envioInfo.telefono}</p>
                             <p className="mb-4"><b>Dirección:</b>{detalleEnvio}</p>
                             <p><b>Pago Total:</b> ${precioTotal}</p>
