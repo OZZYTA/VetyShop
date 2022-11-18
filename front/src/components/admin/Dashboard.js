@@ -20,7 +20,7 @@ const Dashboard = () => {
 
     let outOfStock = 0;
     products.forEach(product => {
-        if (product.stock === 0) {
+        if (product.inventario === 0) {
             outOfStock += 1;
         }
     })
