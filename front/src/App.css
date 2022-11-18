@@ -484,12 +484,13 @@ footer {
 
 .sidebar-wrapper {
   display: flex;
-  width: 100%;
+  width: 200px;
   align-items: stretch;
   min-height: 100vh;
   font-weight: normal;
 
   margin-top: 0;
+  margin-left: -85px;
   height: 100%;
   left: 0;
   top: 0;
@@ -503,7 +504,7 @@ footer {
   transition: all 0.3s;
 }
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: 0px;
 }
 
 #sidebar .sidebar-header {
