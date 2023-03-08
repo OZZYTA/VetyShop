@@ -149,7 +149,9 @@ export const ProductDetails = () => {
               <button type="button" id="cart_btn" className="btn btn-primary d-inline ml-4" disabled={product.inventario === 0} onClick={addToCart}>Agregar al Carrito</button>
               <hr />
               <p>Estado: <span id="stock_stado" className={product.inventario > 0 ? 'greenColor' : 'redColor'}>{product.inventario > 0 ? "En existencia" : "Agotado"}</span></p>
-              <hr />
+             <hr />
+              <p id="categoria">Categoria: <strong>{product.categoria}</strong></p>
+             <hr />
               <h4 className="mt-2">Descripción:</h4>
               <p>{product.descripcion}</p>
               <hr />
