@@ -5,10 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "node back/server.js",
-    "build": "npm run build",
     "dev": "export NODE_ENV=DEVELOPMENT&& nodemon back/server",
     "prod": "export NODE_ENV=PRODUCTION&& nodemon back/server",
-    "postbuild": "NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix front && npm run build --prefix front"
+    "vercel-build": "NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix front && npm run build --prefix front"
   },
   "repository": {
     "type": "git",
