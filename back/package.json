@@ -1,0 +1,41 @@
+{
+  "name": "vetyshop",
+  "version": "1.0.0",
+  "description": "Tienda virtual de productos para mascotas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node back/server.js",
+    "build": "cd front && npm run build",
+    "dev": "export NODE_ENV=DEVELOPMENT&& nodemon back/server",
+    "prod": "export NODE_ENV=PRODUCTION&& nodemon back/server",
+    "postbuild": "NPM_CONFIG_PRODUCTION=false && NODE_OPTIONS=--openssl-legacy-provider && npm install --force --prefix front && npm run build --prefix front"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OZZYTA/VetyShop.git"
+  },
+  "author": "Natali Velasquez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OZZYTA/VetyShop/issues"
+  },
+  "homepage": "https://github.com/OZZYTA/VetyShop#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "cloudinary": "^1.32.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.4",
+    "node-fetch": "^3.2.10",
+    "nodemailer": "^6.8.0",
+    "react-scripts": "^5.0.1",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
