@@ -7,7 +7,7 @@ services:
     env: docker # valid values: https://render.com/docs/yaml-spec#environment
     dockerfilePath: Dockerfile.render
     plan: starter # optional; defaults to starter
-    numInstances: 0
+    numInstances: 1
     envVars:
       - key: DB_URI # Imported from Heroku app
         value: mongodb+srv://udea:Mandarina89@vetyshop.ec1s1hz.mongodb.net/vetyshop
