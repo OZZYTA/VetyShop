@@ -47,7 +47,7 @@ const NewProduct = () => {
             alert.success('Product created successfully');
             dispatch({ type: NEW_PRODUCT_RESET })
         }
-
+        // eslint-disable-next-line
     }, [dispatch, alert, error, success])
 
     const submitHandler = (e) => {
