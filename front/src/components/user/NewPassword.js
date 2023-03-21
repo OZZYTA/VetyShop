@@ -28,8 +28,7 @@ export const NewPassword = () => {
             alert.success('Contraseña reiniciada correctamente')
             navigate('/login')
         }
-        // eslint-disable-next-line
-    }, [dispatch, alert, error, success])
+    }, [dispatch, alert, error, success, navigate])
 
     const submitHandler = (e) => {
         e.preventDefault();

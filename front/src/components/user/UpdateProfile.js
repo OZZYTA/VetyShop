@@ -40,8 +40,7 @@ export const UpdateProfile = () => {
                 type: UPDATE_PROFILE_RESET
             })
         }
-        // eslint-disable-next-line
-    }, [dispatch, alert, error, isUpdated])
+    }, [dispatch, alert, error, isUpdated, user, navigate])
 
     const submitHandler = (e) => {
         e.preventDefault();

@@ -26,8 +26,7 @@ export const Register = () => {
         if (error) {
             dispatch(clearErrors)
         }
-        // eslint-disable-next-line
-    }, [dispatch, isAuthenticated, error, alert])
+    }, [dispatch, isAuthenticated, error, alert, navigate])
 
     const submitHandler = (e) =>{
         e.preventDefault();

@@ -6,7 +6,7 @@ const sendEmail = async options =>{
         port: 587,
         auth: {
           user: "ozzyta@outlook.com",
-          pass: "lhqyxlcozvmnrlkw"
+          pass: "Lancelot89*"
         }
       });
     const mensaje={
