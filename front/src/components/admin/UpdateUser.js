@@ -49,7 +49,7 @@ const UpdateUser = () => {
                 type: UPDATE_USER_RESET
             })
         }
-
+        // eslint-disable-next-line
     }, [dispatch, alert, error, isUpdated, userId, user])
 
     const submitHandler = (e) => {

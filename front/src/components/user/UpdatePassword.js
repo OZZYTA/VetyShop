@@ -29,6 +29,7 @@ export const UpdatePassword = () => {
                 type: UPDATE_PASSWORD_RESET
             })
         }
+        // eslint-disable-next-line
     },[dispatch, alert, error, isUpdated])
 
 const submitHandler= (e)=>{

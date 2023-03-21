@@ -31,7 +31,7 @@ const OrdersList = () => {
             navigate('/orderList');
             dispatch({ type: DELETE_ORDER_RESET })
         }
-
+        // eslint-disable-next-line
     }, [dispatch, alert, error, isDeleted])
 
 

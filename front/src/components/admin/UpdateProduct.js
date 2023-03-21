@@ -63,7 +63,7 @@ export const UpdateProduct = () => {
             navigate("/dashboard")
             dispatch({ type: UPDATE_PRODUCT_RESET})
         }
-
+        // eslint-disable-next-line
     }, [dispatch, alert, error, isUpdated, updateError, product, productId])
 
     const submitHandler = (e) => {

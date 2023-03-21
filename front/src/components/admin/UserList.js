@@ -31,7 +31,7 @@ const UsersList = () => {
             navigate('/admin/users');
             dispatch({ type: DELETE_USER_RESET })
         }
-
+        // eslint-disable-next-line
     }, [dispatch, alert, error, isDeleted])
 
     const deleteUserHandler = (id) => {
