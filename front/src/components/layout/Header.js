@@ -33,12 +33,12 @@ const Header = () => {
                 </div>
                 {/*Boton inicio sesión*/}
                 <div className="col-12 col-md-4 mt-4 mt-md-0 text-center">
-                    <Link to="/carrito"><i class="fa fa-shopping-cart fa-2x text-white" aria-hidden="false"></i>
+                    <Link to="/carrito"><i class="fa fa-shopping-cart fa-2x text-trapitos-blue" aria-hidden="false"></i>
                         <span className="ml-1" id="cart_count">{cartItems.length}</span></Link>
 
                     {user ? (
-                        <div className="ml-4 dropdown d-inline text-trapitos-blue">
-                            <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button"
+                        <div className="ml-4 dropdown d-inline">
+                            <Link to="#!" className="btn dropdown-toggle text-trapitos-blue mr-4" type="button"
                                 id="dropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <figure className='avatar avatar-nav'>
                                     <img
