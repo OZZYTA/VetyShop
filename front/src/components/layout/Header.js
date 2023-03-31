@@ -37,7 +37,7 @@ const Header = () => {
                         <span className="ml-1" id="cart_count">{cartItems.length}</span></Link>
 
                     {user ? (
-                        <div className="ml-4 dropdown d-inline">
+                        <div className="ml-4 dropdown d-inline text-trapitos-blue">
                             <Link to="#!" className="btn dropdown-toggle text-white mr-4" type="button"
                                 id="dropDownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <figure className='avatar avatar-nav'>
